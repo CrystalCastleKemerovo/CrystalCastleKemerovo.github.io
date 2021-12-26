@@ -68,16 +68,10 @@
             -moz-transition:all 0.5s ease;
             background: #00ADE4;
         }
-        .datepicker {
-            width: 300px;
-            height: 50px;
-            border: 1px solid rgb(22, 110, 182);
-            text-align: center;
-            margin-bottom: 10px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+        table {
+            border-spacing: 10px 0;
         }
+
         </style>
 </head>
 <body>
@@ -98,19 +92,134 @@
             </ul>  
         </div> 
     </header>
-
-    <div style="text-align:center">
-        <h2>Страница входа для персонала</h2>
-      </div>
-
     <p>На данной странице должна располагаться форма для входа персонала. Каждому работнику будет доступ к своей странице. Так администраторы смогут проверить бронь, управлять записями и персоналом, обслуживающий персонал сможет посмотреть, в каких номерах и какое время работают, и т.д.</p>
-    <input type="text" class="datepicker" value="логин"><br/>
-    <input type="text" class="datepicker" value="пароль"><br/>
-    <form action="login2.html">
-        <input class="datepicker" type="submit" value="Войти" />
-    </form>
-
-
-
+    <button>Добавить новую запись</button>
+    <table>
+        <tr>
+            <td>
+Номер записи
+            </td>
+            <td>
+Фамилия
+            </td>
+            <td>
+Имя
+            </td>
+            <td>
+Отчество
+            </td>
+            <td>
+Категория номера
+            </td>
+            <td>
+Дата заезда
+            </td>
+            <td>
+Дата съезда
+            </td>
+            <td>
+Статус оплаты
+            </td>
+            <td>
+Обслуживающий персонал
+            </td>
+        </tr>
+        <tr>
+            <td>
+1
+            </td>
+            <td>
+Моисеенко
+            </td>
+            <td>
+Виталий
+            </td>
+            <td>
+Олегович
+            </td>
+            <td>
+Студия2
+            </td>
+            <td>
+28.12.2021
+            </td>
+            <td>
+5.01.2022
+            </td>
+            <td>
+Оплачено
+            </td>
+            <td>
+Киренберг
+            </td>
+            <td>
+<button>Изменить</button>
+            </td>           
+        </tr>
+        <tr>
+            <td>
+2
+            </td>
+            <td>
+Боровкова
+            </td>
+            <td>
+Ксения
+            </td>
+            <td>
+Евгеньевна
+            </td>
+            <td>
+Люкс2
+            </td>
+            <td>
+28.12.2021
+            </td>
+            <td>
+5.01.2022
+            </td>
+            <td>
+Оплачено
+            </td>
+            <td>
+Киренберг
+            </td>    
+            <td>
+<button>Изменить</button>
+            </td>       
+        </tr>
+        <tr>
+            <td>
+3
+            </td>
+            <td>
+Асанова
+            </td>
+            <td>
+Дарья
+            </td>
+            <td>
+Николаевна
+            </td>
+            <td>
+Бизнес2
+            </td>
+            <td>
+28.12.2021
+            </td>
+            <td>
+5.01.2022
+            </td>
+            <td>
+Оплачено
+            </td>
+            <td>
+Киренберг
+            </td>
+            <td>
+<button>Изменить</button>
+            </td>           
+        </tr>
+    </table>
 </body>
 </html>

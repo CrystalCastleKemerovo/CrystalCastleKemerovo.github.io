@@ -68,6 +68,12 @@
             -moz-transition:all 0.5s ease;
             background: #00ADE4;
         }
+
+        .datepicker {
+            margin: 20px 20px;
+            height: 30px;
+            width: 200px;
+        }
         </style>
 </head>
 <body>
@@ -88,7 +94,17 @@
             </ul>  
         </div> 
     </header>
+    <div style="text-align:center">
+        <h2>Страница бронирования</h2>
+        <p>Здесь вы можете забронировать номер в нашей гостинице</p>
+      </div>
 
-    <p>На данной странице подразумевается бронирование номеров и его оплата. Бронирование осуществляется выбором даты заезда и даты съезда из свободных доступных. После ввода данных пользователь переходит на форму оплаты, где оплачивает бронь, и после оплаты ему выдается уникальный 9-значный ID брони. По этому ID он сможет продлить бронь на этой же странице.</p>
+
+    <input type="text" class="datepicker" value="дата заезда (дд / мм / гггг)">
+    <input type="text" class="datepicker" value="дата съезда (дд / мм / гггг)">
+    <input type="text" class="datepicker" value="количество взрослых">
+    <input type="text" class="datepicker" value="количество детей (0-12 лет)">
+    <input type="text" class="datepicker" value="ID (продление)">
+    <button>Подтвердить</button>
 </body>
 </html>

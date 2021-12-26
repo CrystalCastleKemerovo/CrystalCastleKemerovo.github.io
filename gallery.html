@@ -68,7 +68,71 @@
             -moz-transition:all 0.5s ease;
             background: #00ADE4;
         }
-        </style>
+
+        .column {
+            float: left;
+            width: 17%;
+            height: 150px;
+            padding: 10px;
+        }
+
+        /* Style the images inside the grid */
+        .column img {
+            object-fit: cover;
+            height: 150px;
+            width: 150px;
+            opacity: 0.8; 
+            cursor: pointer; 
+        }
+
+        .column img:hover {
+            opacity: 1;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* The expanding image container */
+        .container {
+            display: block;
+            height: 700px;
+        }
+        #expandedImg {
+            height: 700px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Expanding image text */
+        #imgtext {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: white;
+            font-size: 20px;
+        }
+
+        /* Closable button inside the expanded image */
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }        
+
+        .row {
+            display: table;
+            margin: 0 auto;
+            width: 50%;
+        }
+</style>
 </head>
 <body>
     <header>
@@ -88,6 +152,48 @@
             </ul>  
         </div> 
     </header>
-    <p>На данной странице задумана галерея фотографий. Каждая категория номеров обладает своей галереей, которые располагаются вертикально сверху-вниз, в порядке возрастания цены.</p>
+
+    <div style="text-align:center">
+        <h2>Галерея фотографий</h2>
+        <p>Здесь вы можете посмотреть наши номера поближе</p>
+      </div>
+<br/>
+    <div style="text-align:center">
+        <h2>Cтандартный двухместный с одной большой кроватью</h2>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img src="gallery/Studio1.jpg" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="gallery/Studio2.jpg" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="gallery/Studio3.jpg" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="gallery/Studio4.jpg" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="gallery/Studio5.jpg" style="width:100%" onclick="myFunction(this);">
+          </div>  
+      </div>
+      
+      <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">×</span>
+        <img id="expandedImg">
+        <div id="imgtext"></div>
+      </div>
+    
+    <script>
+        function myFunction(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+        }
+        </script>
 </body>
 </html>
